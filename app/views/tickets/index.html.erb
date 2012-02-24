@@ -1,0 +1,36 @@
+<h1>Listing tickets</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tickets.each do |ticket| %>
+  <tr>
+    <td><%= ticket.name %></td>
+    <td><%= ticket.price %></td>
+    <td><%= link_to 'Show', ticket %></td>
+    <td><%= link_to 'Edit', edit_ticket_path(ticket) %></td>
+    <td><%= link_to 'Destroy', ticket, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ticket', new_ticket_path %>
+
+<h2>This is a team project led by <%= @message%>
+<p><small>Copyright &copy; 2012 Steliyan. All rights reserve.</small></p>
+	<%= 
+	x = rand(100) 
+		if ((x <50) && (x%2==0))
+		puts "#{x} is less than fifty and is even :)"
+		else
+		puts "#{x} is greater than fifty and is odd "
+		end 
+		%> </h2>
